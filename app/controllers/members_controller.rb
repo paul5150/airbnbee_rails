@@ -1,7 +1,7 @@
-class MembersControllers < ApplicationController
+class MembersController < ApplicationController
 
-  def new
-  end
+
   def index
     @members = Member.all
   end
+end
