@@ -1,0 +1,9 @@
+<%= render('layouts/errors', :object => @listing) %>
+
+<%= form_for [@location, @listing] do |f| %>
+<%= f.label :rooms %>
+<%= f.text_field :rooms %>
+<%= f.label :price %>
+<%= f.text_field :price %>
+<p><%= f.submit %></p>
+<% end %>

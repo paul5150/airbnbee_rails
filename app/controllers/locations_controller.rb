@@ -5,10 +5,12 @@ class LocationsController < ApplicationController
 
   def index
     @locations = Location.all
+
   end
 
   def show
-    @locations = Location.find(params[:id])
+    @location = Location.find(params[:id])
+
   end
 
   def create
@@ -28,7 +30,7 @@ class LocationsController < ApplicationController
   end
 
   private
-  def question_params
+  def location_params
     params.require(:location).permit(:city)
   end
 end

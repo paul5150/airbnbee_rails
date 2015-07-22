@@ -1,0 +1,29 @@
+<h1>individual city page</h1>
+
+<h1><%= @location.city %></h1>
+
+<% if @location.listings.any? %>
+<h4>Here are the listings for this location:</h4>
+
+<ul>
+  <% @location.listings.each do |listing| %>
+  <li>
+    <%= listing.price %> |
+    <%= link_to "Edit", edit_location_listing_path(@location, listing) %> |
+    <%= link_to "Delete", location_listing_path(@location, listing),
+    :data => {:confirm => "Are you sure?",
+      :method => "delete"} %>
+    </li>
+    <% end %>
+  </ul>
+  <% else %>
+  <p>There are no listings yet!</p>
+  <% end %>
+
+  <div class="links"
+  <p><%= link_to "Add a listing", new_location_listing_path(@location) %>
+    <%= link_to "Delete Location", location_path(@location),
+    :data => {:confirm => "Are you sure?",
+      :method => "delete"} %>
+      <%= link_to "Return to locations", locations_path %></p>
+    </div>
