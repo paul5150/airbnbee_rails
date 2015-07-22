@@ -1,0 +1,20 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+
+
+development:
+  <<: *default
+  database: airbnbee_development
+
+
+test:
+  <<: *default
+  database: airbnbee_test
+
+
+production:
+  <<: *default
+  database: airbnbee_production
+  username: airbnbee
+  password: <%= ENV['AIRBNBEE_DATABASE_PASSWORD'] %>
