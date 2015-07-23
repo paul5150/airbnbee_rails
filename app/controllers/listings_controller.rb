@@ -1,5 +1,5 @@
 class ListingsController < ApplicationController
-
+  before_filter :authenticate_user!, except: [:index, :show]
 
   def new
     @location = Location.find(params[:location_id])
@@ -10,7 +10,7 @@ class ListingsController < ApplicationController
     @location = Location.find(params[:location_id])
     @listing = @location.listings.new(listing_params)
     if @listing.save
-      redirect_to location_path(@listing.locations)
+      redirect_to location_path(@listing.location)
     else
       render :new
     end

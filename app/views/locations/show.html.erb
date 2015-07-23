@@ -8,11 +8,13 @@
 <ul>
   <% @location.listings.each do |listing| %>
   <li>
-    <%= listing.price %> |
+    <p>Number of rooms: <%= listing.rooms %> |
+    Price per Night: $<%= listing.price %> |
     <%= link_to "Edit", edit_location_listing_path(@location, listing) %> |
     <%= link_to "Delete", location_listing_path(@location, listing),
     :data => {:confirm => "Are you sure?",
       :method => "delete"} %>
+    </p>
     </li>
     <% end %>
   </ul>
