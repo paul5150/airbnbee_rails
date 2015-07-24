@@ -1,1 +1,13 @@
-<h1>Hello there world traveller!!</h1>
+<h1>WELCOME TO AIRBNBEE</h1>
+
+<h2>Check out the listings in these cities:</h2>
+
+<div class="cities">
+
+<ul>
+      <% @locations.each do |location| %>
+  <li>
+    <%= link_to location.city, location_path(location) %>  </li>
+  <% end %>
+</ul>
+</div>

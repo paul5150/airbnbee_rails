@@ -5,8 +5,11 @@ class CreateListings < ActiveRecord::Migration
       t.column :price, :integer
       t.column :location_id, :integer
       t.column :member_id, :integer
+      t.column :image_file_name, :string
+      t.column :image_content_type, :string
+      t.column :image_file_size, :integer
 
-      t.timestamps
+      t.column :timestamps, :integer
     end
   end
 end

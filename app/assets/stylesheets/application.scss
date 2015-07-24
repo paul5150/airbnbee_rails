@@ -4,4 +4,74 @@
 
 .links {
   padding:px;
+
+}
+
+.links a {
+  padding-right:15px;
+  color: white;
+}
+
+.jumbotron {
+  background-image:url(http://www.healthqu.com/wp-content/uploads/2015/07/36-rent-a-vacation-home-on-magnificent-decor-rent-design-ideas.jpeg);
+  height: 900px;
+  color: white;
+  background-size: cover;
+  padding-top: 10px;
+
+}
+
+.jumbotron h1 {
+  text-shadow: 1px 1px 1px #000,
+  3px 3px 5px #3F3A40;
+  margin-top: 65px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+
+}
+
+.jumbotron h2 {
+  font-size: 40px;
+  text-shadow: 1px 1px 1px #000,
+  3px 3px 5px #3F3A40;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.jumbotron h2 a{
+  color: white;
+}
+
+
+
+ul a {
+  text-shadow: 1px 1px 1px #000,
+  3px 3px 5px #3F3A40;
+  color: white;
+
+}
+
+nav navbar-nav navbar-right {
+  margin-top: 20px;
+
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+}
+
+.cities ul li a {
+  font-size: 55px;
+}
+
+.new_listing p input {
+  color: gray;
+}
+
+input {
+  color: gray;
+}
+
+.loc ul a{
+  font-size: 40px;
 }

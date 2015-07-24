@@ -1,4 +1,4 @@
-<h1>individual city page</h1>
+
 
 <h1><%= @location.city %></h1>
 
@@ -8,6 +8,7 @@
 <ul>
   <% @location.listings.each do |listing| %>
   <li>
+    <%= image_tag listing.image.url(:medium) %>
     <p>Number of rooms: <%= listing.rooms %> |
     Price per Night: $<%= listing.price %> |
     <%= link_to "Edit", edit_location_listing_path(@location, listing) %> |
